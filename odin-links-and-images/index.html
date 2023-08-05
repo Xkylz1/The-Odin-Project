@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Homepage</h1>
-    <a href="https://www.theodinproject.com/about" target="_blank">click me</a> 
+    <a
+      href="https://www.theodinproject.com/about"
+      target="_blank"
+      rel="noopener noreferrer"
+      >click me</a
+    >
     <!-- default target value means _self
     _blank for new tab -->
+    <!-- The noopener value prevents the opened link from gaining access to the webpage from which
+    it was opened. The noreferrer value prevents the opened link from knowing which webpage or
+    resource has a link (or ‘reference’) to it. It also includes the noopener behaviour and thus
+    can be used by itself as well. -->
 
-</body>
+    <!-- Absolute Link (on other web) -->
+    <!-- Relativ link ( this web) -->
+    <!-- Links to other pages within our own website are called relative links. Relative links
+        do not include the domain name, since it is another page on the same site, it assumes
+        the domain name will be the same as the page we created the link on. -->
+    <h1>Homepage</h1>
+    <a href="https://www.theodinproject.com/about">click me</a>
+
+    <a href="page/about.html">About</a>
+
+    <!-- n many cases, this will work just fine; however, you can still run into unexpected issues with this approach. Prepending ./ before the link will in most cases prevent such issues. By adding ./ you are specifying to your code that it should start looking for the file/directory relative to the current directory. -->
+    <h1>Homepage</h1>
+    <a href="./pages/about.html">About</a>
+    <img src="./images/dog.jpg">
+  </body>
 </html>
